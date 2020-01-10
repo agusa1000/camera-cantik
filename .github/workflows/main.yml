@@ -1,0 +1,23 @@
+name: CI
+
+on: [push]
+
+jobs:
+      build:google()  // Google's Maven repository
+       classpath 'com.google.gms:google-services:4.3.2'
+       google()  // Google's Maven repository
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+implementation 'com.google.firebase:firebase-analytics:17.2.0'
+
+google()  // Google's Maven repository
+    runs-on: ubuntu-latestgoogle()  // 
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo Hello, world!
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
